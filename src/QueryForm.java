@@ -18,6 +18,8 @@ public class QueryForm {
         this.sb.addPrefix("dbr", "http://dbpedia.org/resource/");
         this.sb.addPrefix("dbp", "http://dbpedia.org/property/");
         this.sb.addPrefix("gold", "http://purl.org/linguistics/gold/");
+        this.sb.addPrefix("dct", "http://purl.org/dc/terms/");
+        this.sb.addPrefix("dbc:", "http://dbpedia.org/resource/Category:");
     }
 
     public void addTripleToConstruct(String triple) {
