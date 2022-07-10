@@ -60,6 +60,7 @@ public class QueryActions extends QueryForm {
         Model results = qExecution.execConstruct();
         List<Resource> iter = results.listSubjects().toList();
         for (int i = 0; i < iter.size(); i++) {
+            System.out.println("TOTAL:" + iter.size());
             this.changeName("dbr:" + iter.get(i).getLocalName());
             System.out.println("NAme:" + this.name);
             queryDataByName();
@@ -84,7 +85,7 @@ public class QueryActions extends QueryForm {
             String fileName = this.name.replaceAll("[^\\p{IsAlphabetic}\\p{IsDigit}]", "");
             if (fileName.contains("dbr"))
                 fileName = fileName.replaceAll("dbr", "");
-            File myObj = new File(fileName + ".ttl");
+            File myObj = new File("D:\\TOM\\Java programming\\OOP Project Query\\QueryResults\\" + fileName + ".ttl");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {

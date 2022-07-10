@@ -37,6 +37,10 @@ public class QueryForm {
         this.sb.addWhere("?s", tripleNodes[0], tripleNodes[1]);
     }
 
+    public void addTripleToWhere(String p, String o) {
+        this.sb.addWhere("?s", p, o);
+    }
+
     public void addOptionalToWhere(String triple) {
         String tripleNodes[] = triple.split(" ");
         this.sb.addOptional("?s", tripleNodes[0], tripleNodes[1]);

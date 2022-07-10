@@ -30,11 +30,13 @@ public class Testing {
         // Set the query triples and operators ONCE for each category
         // Note: Always use optional, no triples in WHERE (to avoid inconsistent data)
 
-        test.addTripleToWhere("dct:subject dbc:National_parks_of_Vietnam");
-        test.addTripleToWhere("rdf:type yago:NationalPark108600992");
+        test.addTripleToWhere("dct:subject dbc:Museums_in_Vietnam");
+        // test.addTripleToWhere("rdf:type yago:NationalPark108600992");
         test.addOptionalToWhere("dbo:abstract ?abstract");
         test.addOptionalToWhere("dbp:name ?name");
+        test.addOptionalToWhere("dbo:location ?location");
         test.addTripleToConstruct("dbo:abstract ?abstract");
+        test.addTripleToConstruct("dbo:location ?location");
         test.addTripleToConstruct("dbp:name ?name");
         String langs[] = { "en", "vi" };
         test.addLanguageFilter("?abstract", langs);
