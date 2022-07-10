@@ -79,6 +79,11 @@
         "c:\\Users\\Admin\\Downloads\\jar_files\\libthrift-0.16.0.jar",
         "c:\\Users\\Admin\\Downloads\\jar_files\\protobuf-java-3.19.3.jar",
         "c:\\Users\\Admin\\Downloads\\jar_files\\slf4j-api-1.7.36.jar",
-        "c:\\Users\\Admin\\Downloads\\jar_files\\titanium-json-ld-1.2.0.jar"
+        "c:\\Users\\Admin\\Downloads\\jar_files\\titanium-json-ld-1.2.0.jar",
+        "c:\\Users\\Admin\\Downloads\\commons-text-1.9-bin\\commons-text-1.9\\commons-text-1.9.jar",
+        "c:\\Users\\Admin\\Downloads\\commons-text-1.9-bin\\commons-text-1.9\\commons-text-1.9-javadoc.jar",
+        "c:\\Users\\Admin\\Downloads\\commons-text-1.9-bin\\commons-text-1.9\\commons-text-1.9-sources.jar",
+        "c:\\Users\\Admin\\Downloads\\commons-text-1.9-bin\\commons-text-1.9\\commons-text-1.9-tests.jar",
+        "c:\\Users\\Admin\\Downloads\\commons-text-1.9-bin\\commons-text-1.9\\commons-text-1.9-test-sources.jar"
     ]
 }

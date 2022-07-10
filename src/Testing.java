@@ -1,5 +1,5 @@
 import java.io.FileNotFoundException;
-
+import org.apache.commons.text.*;
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 
 public class Testing {
@@ -26,20 +26,20 @@ public class Testing {
 
         // Do it all over again for the next category
 
-        QueryActions test = new QueryActions("?s");
+        QueryActions test = new QueryActions("dbr:West_Lake_(Hanoi)");
 
         // Set the query triples and operators ONCE for each category
         // Note: Always use optional, no triples in WHERE (to avoid inconsistent data)
 
-        test.addTripleToWhere("dct:subject dbc:National_parks_of_Vietnam");
-        test.addTripleToWhere("rdf:type yago:NationalPark108600992");
+        test.addTripleToWhere("dct:subject dbc:Lakes_of_Hanoi");
+        test.addTripleToWhere("rdf:type dbo:Lake");
         test.addOptionalToWhere("dbo:abstract ?abstract");
         test.addOptionalToWhere("dbp:name ?name");
         test.addTripleToConstruct("dbo:abstract ?abstract");
         test.addTripleToConstruct("dbp:name ?name");
-        test.addLanguageFilter("?abstract", "en");
-        test.addLanguageFilter("?name", "en");
+        // test.addLanguageFilter("?abstract", "en");
+        // test.addLanguageFilter("?name", "en");
 
-        test.queryDataByCatergory();
+        test.queryDataByName();
     }
 }

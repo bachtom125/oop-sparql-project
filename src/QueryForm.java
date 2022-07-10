@@ -1,3 +1,4 @@
+import org.apache.commons.text.StringEscapeUtils;
 import org.apache.jena.arq.querybuilder.ConstructBuilder;
 import org.apache.jena.query.Query;
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
@@ -7,6 +8,10 @@ public class QueryForm {
     protected String name;
 
     public QueryForm(String name) {
+        StringEscapeUtils escaper = new StringEscapeUtils();
+        escaper.escapeJava(name);
+        name.replaceAll("/", "//");
+        System.out.println("HSIT" + name);
         this.name = name;
 
         this.sb.addPrefix("geo", "http://www.w3.org/2003/01/geo/wgs84_pos#");

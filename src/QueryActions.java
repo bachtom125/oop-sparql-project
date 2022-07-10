@@ -10,6 +10,7 @@ import org.apache.jena.sparql.exec.http.QueryExecutionHTTP;
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 import java.util.Set;
 import org.apache.commons.codec.Resources;
+import org.apache.commons.text.StringEscapeUtils;
 
 import javax.print.PrintException;
 
@@ -51,17 +52,19 @@ public class QueryActions extends QueryForm {
         List<Resource> iter = results.listSubjects().toList();
         for (int i = 0; i < iter.size(); i++) {
             this.changeName("dbr:" + iter.get(i).getLocalName());
+            System.out.println("NAme:" + this.name);
             queryDataByName();
         }
     }
 
     public void queryDataByName() {
         String queryString = getQueryString();
+        System.out.println(queryString);
         Query query = QueryFactory.create(queryString);
 
         QueryExecutionHTTP qExecution = QueryExecutionHTTP.service("https://dbpedia.org/sparql", query);
         try {
-            File myObj = new File(this.name.split(":")[1] + ".ttl");
+            File myObj = new File(this.name.replaceAll("dbr:", "") + ".ttl");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
@@ -82,6 +85,7 @@ public class QueryActions extends QueryForm {
     }
 
     public void changeName(String newName) {
+        new StringEscapeUtils().escapeJava(newName);
         this.name = newName;
     }
 }
