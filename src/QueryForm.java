@@ -1,17 +1,17 @@
-import org.apache.commons.text.StringEscapeUtils;
 import org.apache.jena.arq.querybuilder.ConstructBuilder;
 import org.apache.jena.query.Query;
+import org.apache.jena.sparql.function.library.langeq;
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 
 public class QueryForm {
     protected ConstructBuilder sb = new ConstructBuilder();;
     protected String name;
 
+    protected void setName(String name) {
+        this.name = name;
+    }
+
     public QueryForm(String name) {
-        StringEscapeUtils escaper = new StringEscapeUtils();
-        escaper.escapeJava(name);
-        name.replaceAll("/", "//");
-        System.out.println("HSIT" + name);
         this.name = name;
 
         this.sb.addPrefix("geo", "http://www.w3.org/2003/01/geo/wgs84_pos#");
@@ -42,7 +42,13 @@ public class QueryForm {
         this.sb.addOptional("?s", tripleNodes[0], tripleNodes[1]);
     }
 
-    public void addLanguageFilter(String node, String language) throws ParseException {
-        this.sb.addFilter("lang(" + node + ") = " + "'" + language + "'");
+    public void addLanguageFilter(String node, String languages[]) throws ParseException {
+        String langs = "";
+        for (int i = 0; i < languages.length; i++) {
+            langs += "lang(" + node + ") = " + "\"" + languages[i] + "\"";
+            if (i != languages.length - 1)
+                langs += "||";
+        }
+        this.sb.addFilter(langs);
     }
 }
