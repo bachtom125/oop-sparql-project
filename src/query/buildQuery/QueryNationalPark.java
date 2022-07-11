@@ -11,9 +11,9 @@ public class QueryNationalPark extends QueryCategory {
     public QueryNationalPark() throws ParseException, IOException {
         QueryActions NationalPark = new QueryActions("?s");
         NationalPark.addTripleToWhere("dct:subject dbc:National_parks_of_Vietnam");
-        NationalPark.addOptionalToWhere("dbo:abstract ?abstract");
+        NationalPark.addOptionalToWhere(abs);
         NationalPark.addOptionalToWhere("rdfs:label ?label");
-        NationalPark.addOptionalToWhere("dbp:name ?name");
+        NationalPark.addOptionalToWhere(name);
         NationalPark.addOptionalToWhere("dbo:location ?location");
         NationalPark.addOptionalToWhere("dbp:areaHa ?areaHa");
         NationalPark.addOptionalToWhere("dbp:location ?location");
@@ -30,8 +30,8 @@ public class QueryNationalPark extends QueryCategory {
         NationalPark.addOptionalToWhere("dbp:date ?date");
         NationalPark.addOptionalToWhere("dbp:title ?title");
 
-        NationalPark.addTripleToConstruct("dbo:abstract ?abstract");
-        NationalPark.addTripleToConstruct("dbp:name ?name");
+        NationalPark.addTripleToConstruct(abs);
+        NationalPark.addTripleToConstruct(name);
         NationalPark.addTripleToConstruct("dbo:location ?location");
         NationalPark.addTripleToConstruct("dbp:areaHa ?areaHa");
         NationalPark.addTripleToConstruct("dbp:location ?location");

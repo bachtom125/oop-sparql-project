@@ -14,8 +14,8 @@ public class QueryMuseum extends QueryCategory {
         QueryActions Museum = new QueryActions("?s");
 
         Museum.addTripleToWhere("dct:subject dbc:Museums_in_Vietnam");
-        Museum.addTripleToConstruct("dbo:abstract ?abstract");
-        Museum.addTripleToConstruct("dbp:name ?name");
+        Museum.addTripleToConstruct(abs);
+        Museum.addTripleToConstruct(name);
         Museum.addTripleToConstruct("rdf:type yago:Museum103800563");
         Museum.addTripleToConstruct("rdfs:label ?label");
         Museum.addTripleToConstruct("rdfs:comment ?comment");
@@ -39,8 +39,8 @@ public class QueryMuseum extends QueryCategory {
         Museum.addTripleToConstruct("dbp:built ?built");
         Museum.addTripleToConstruct("dbp:builtFor ?builtFor");
 
-        Museum.addOptionalToWhere("dbo:abstract ?abstract");
-        Museum.addOptionalToWhere("dbp:name ?name");
+        Museum.addOptionalToWhere(abs);
+        Museum.addOptionalToWhere(name);
         Museum.addOptionalToWhere("rdf:type yago:Museum103800563");
         Museum.addOptionalToWhere("rdfs:label ?label");
         Museum.addOptionalToWhere("rdfs:comment ?comment");

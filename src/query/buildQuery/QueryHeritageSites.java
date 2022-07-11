@@ -13,8 +13,8 @@ public class QueryHeritageSites extends QueryCategory {
         QueryActions Heritage = new QueryActions("?s");
 
         Heritage.addTripleToWhere("dct:subject dbc:World_Heritage_Sites_in_Vietnam");
-        Heritage.addTripleToConstruct("dbo:abstract ?abstract");
-        Heritage.addTripleToConstruct("dbp:name ?name");
+        Heritage.addTripleToConstruct(abs);
+        Heritage.addTripleToConstruct(name);
         Heritage.addTripleToConstruct("dbo:areaTotal ?areaTotal");
         Heritage.addTripleToConstruct("dbo:country ?country");
         Heritage.addTripleToConstruct("dbo:originalName ?originalName");
@@ -39,8 +39,8 @@ public class QueryHeritageSites extends QueryCategory {
         Heritage.addTripleToConstruct("dbp:district ?district");
         Heritage.addTripleToConstruct("dbp:nativeNameLang ?nativeNameLang");
 
-        Heritage.addOptionalToWhere("dbo:abstract ?abstract");
-        Heritage.addOptionalToWhere("dbp:name ?name");
+        Heritage.addOptionalToWhere(abs);
+        Heritage.addOptionalToWhere(name);
         Heritage.addOptionalToWhere("dbo:areaTotal ?areaTotal");
         Heritage.addOptionalToWhere("dbo:country ?country");
         Heritage.addOptionalToWhere("dbo:originalName ?originalName");

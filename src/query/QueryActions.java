@@ -58,7 +58,7 @@ public class QueryActions extends QueryForm {
         String queryString = getQueryString();
 
         String currentPath = new java.io.File(".").getCanonicalPath();
-        String filePath = currentPath + "\\results\\" + subject;
+        String filePath = currentPath + "\\QueriedFiles\\" + subject;
         File theDir = new File(filePath);
         if (!theDir.exists()) {
             System.out.println("Created folder: " + subject + "\n");
@@ -99,7 +99,7 @@ public class QueryActions extends QueryForm {
         this.name = newName;
     }
 
-    public String setEscape(String name) {
+    private String setEscape(String name) {
         if (name.contains("("))
             name = name.replaceAll("\\(", Matcher.quoteReplacement("\\("));
 
@@ -112,7 +112,7 @@ public class QueryActions extends QueryForm {
         return name;
     }
 
-    public String getValidFileName(String fileName) {
+    private String getValidFileName(String fileName) {
         fileName = fileName.replaceAll("[^\\p{IsAlphabetic}\\p{IsDigit}]", "");
         if (fileName.contains("db")) {
             fileName = fileName.substring(3);

@@ -14,8 +14,8 @@ public class QueryLake extends QueryCategory {
         QueryActions Lake = new QueryActions("?s");
 
         Lake.addTripleToWhere("dct:subject dbc:Lakes_of_Vietnam");
-        Lake.addTripleToConstruct("dbo:abstract ?abstract");
-        Lake.addTripleToConstruct("dbp:name ?name");
+        Lake.addTripleToConstruct(abs);
+        Lake.addTripleToConstruct(name);
         Lake.addTripleToConstruct("dbo:areaTotal ?areaTotal");
         Lake.addTripleToConstruct("dbo:country ?country");
         Lake.addTripleToConstruct("dbo:elevation ?elevation");
@@ -57,8 +57,8 @@ public class QueryLake extends QueryCategory {
         Lake.addTripleToConstruct("dbo:type ?type");
         Lake.addTripleToConstruct("dbo:width ?width");
 
-        Lake.addOptionalToWhere("dbo:abstract ?abstract");
-        Lake.addOptionalToWhere("dbp:name ?name");
+        Lake.addOptionalToWhere(abs);
+        Lake.addOptionalToWhere(name);
         Lake.addOptionalToWhere("dbo:areaTotal ?areaTotal");
         Lake.addOptionalToWhere("dbo:country ?country");
         Lake.addOptionalToWhere("dbo:elevation ?elevation");
