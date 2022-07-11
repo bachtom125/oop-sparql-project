@@ -1,3 +1,5 @@
+package query;
+
 import org.apache.jena.arq.querybuilder.ConstructBuilder;
 import org.apache.jena.query.Query;
 import org.apache.jena.sparql.function.library.langeq;

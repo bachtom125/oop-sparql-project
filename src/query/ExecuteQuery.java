@@ -1,7 +1,9 @@
+package query;
+
 import java.io.FileNotFoundException;
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 
-public class Testing {
+public class ExecuteQuery {
     public static void main(String[] args) throws ParseException, FileNotFoundException {
         // QueryActions test = new QueryActions("dbr:Ba_Bể_National_Park");
 
