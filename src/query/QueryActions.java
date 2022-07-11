@@ -3,7 +3,6 @@ package query;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.Resource.*;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
@@ -66,22 +65,10 @@ public class QueryActions extends QueryForm {
         if (queryString == null) {
             return;
         }
-        System.out.println(queryString);
         Query query = QueryFactory.create(queryString);
 
         QueryExecutionHTTP qExecution = QueryExecutionHTTP.service("https://dbpedia.org/sparql", query);
         try {
-            // String fileName = this.name;
-            // if (this.name.contains("dbr:")) {
-            // fileName = this.name.replaceAll("dbr:", "");
-            // }
-            // fileName = fileName.split(Matcher.quoteReplacement("\\"))[0];
-
-            // String fileName =
-            // this.name.replaceAll("[^\\p{IsAlphabetic}\\p{IsDigit}]","");
-            // if (fileName.contains("dbr"))
-            // fileName = fileName.replaceAll("dbr", "");
-
             String fileName = getValidFileName(this.name);
             File myObj = new File(
                     "D:\\TOM\\Java programming\\OOP Project Query\\src\\results\\" + subject + "\\" + fileName
