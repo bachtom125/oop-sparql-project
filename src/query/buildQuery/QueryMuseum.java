@@ -17,7 +17,7 @@ public class QueryMuseum extends QueryCategory {
         Museum.addTripleToConstruct(abs);
         Museum.addTripleToConstruct(name);
         Museum.addTripleToConstruct("rdf:type yago:Museum103800563");
-        Museum.addTripleToConstruct("rdfs:label ?label");
+        Museum.addTripleToConstruct(label);
         Museum.addTripleToConstruct("rdfs:comment ?comment");
         Museum.addTripleToConstruct("geo:lat ?lat");
         Museum.addTripleToConstruct("geo:long ?long");
@@ -42,7 +42,7 @@ public class QueryMuseum extends QueryCategory {
         Museum.addOptionalToWhere(abs);
         Museum.addOptionalToWhere(name);
         Museum.addOptionalToWhere("rdf:type yago:Museum103800563");
-        Museum.addOptionalToWhere("rdfs:label ?label");
+        Museum.addOptionalToWhere(label);
         Museum.addOptionalToWhere("rdfs:comment ?comment");
         Museum.addOptionalToWhere("geo:lat ?lat");
         Museum.addOptionalToWhere("geo:long ?long");

@@ -24,7 +24,7 @@ public class QueryHeritageSites extends QueryCategory {
         Heritage.addTripleToConstruct("dbp:officialName ?officialName");
         Heritage.addTripleToConstruct("dbp:pushpinMap ?pushpinMap");
         Heritage.addTripleToConstruct("rdfs:comment ?comment");
-        Heritage.addTripleToConstruct("rdfs:label ?label");
+        Heritage.addTripleToConstruct(label);
         Heritage.addTripleToConstruct("geo:lat ?lat");
         Heritage.addTripleToConstruct("geo:long ?long");
         Heritage.addTripleToConstruct("rdf:type yago:Location100027167");
@@ -50,7 +50,7 @@ public class QueryHeritageSites extends QueryCategory {
         Heritage.addOptionalToWhere("dbp:officialName ?officialName");
         Heritage.addOptionalToWhere("dbp:pushpinMap ?pushpinMap");
         Heritage.addOptionalToWhere("rdfs:comment ?comment");
-        Heritage.addOptionalToWhere("rdfs:label ?label");
+        Heritage.addOptionalToWhere(label);
         Heritage.addOptionalToWhere("geo:lat ?lat");
         Heritage.addOptionalToWhere("geo:long ?long");
         Heritage.addOptionalToWhere("rdf:type yago:Location100027167");

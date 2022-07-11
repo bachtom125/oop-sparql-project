@@ -26,7 +26,7 @@ public class QueryLake extends QueryCategory {
         Lake.addTripleToConstruct("dbp:basinCountries ?basinCountries");
         Lake.addTripleToConstruct("dbp:location ?location");
         Lake.addTripleToConstruct("dbp:pushpinMap ?pushpinMap");
-        Lake.addTripleToConstruct("rdfs:label ?label");
+        Lake.addTripleToConstruct(label);
         Lake.addTripleToConstruct("rdfs:comment ?comment");
         Lake.addTripleToConstruct("rdf:type yago:Lake109328904");
         Lake.addTripleToConstruct("dbo:shoreLength ?shoreLength");
@@ -69,7 +69,7 @@ public class QueryLake extends QueryCategory {
         Lake.addOptionalToWhere("dbp:basinCountries ?basinCountries");
         Lake.addOptionalToWhere("dbp:location ?location");
         Lake.addOptionalToWhere("dbp:pushpinMap ?pushpinMap");
-        Lake.addOptionalToWhere("rdfs:label ?label");
+        Lake.addOptionalToWhere(label);
         Lake.addOptionalToWhere("rdfs:comment ?comment");
         Lake.addOptionalToWhere("rdf:type yago:Lake109328904");
         Lake.addOptionalToWhere("dbo:shoreLength ?shoreLength");

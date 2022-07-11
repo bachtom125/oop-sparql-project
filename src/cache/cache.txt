@@ -1,14 +1,15 @@
 @prefix dbo:  <http://dbpedia.org/ontology/> .
+@prefix dbr:  <http://dbpedia.org/resource/> .
 @prefix geo:  <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix yago: <http://dbpedia.org/class/yago/> .
 
-<http://dbpedia.org/resource/Huế_Museum_of_Royal_Fine_Arts>
+dbr:List_of_war_museums_and_monuments_in_Vietnam
         rdf:type      dbo:Museum , yago:Museum103800563 ;
-        rdfs:comment  "順化宮廷文物博物館（越南语：Bảo tàng Cổ vật Cung đình Huế／寶藏古物宮廷化）是越南順化市一個直屬於的博物馆。建築物內有128根木柱，刻著和幾首漢字詩。博物館原為阮朝紹治帝所建造的。目前博物馆展示了數百件黃金、瓷器、陶器、搪瓷和王室服飾等古物，甚至藏有越南政府認定的國家寶物——阮朝皇帝的王座。"@zh , "The Huế Museum of Royal Fine Arts is a museum dedicated to Vietnam's imperial past and arts of that era. It is located in the former imperial capital of Huế. By royal decree of 1927, a section for the art of Champa was also instituted. In 2016, an exhibition called \"Royal Treasures of the Nguyen dynasty\" was shown, with pieces that were moved to Hanoi after 1945 for safekeeping."@en , "El Museo de Antigüedades Reales de Huế es un museo vietnamita que está bajo la dirección del Centro de Conservación de Monumentos,​ que se encuentra directamente debajo del Centro de conservación de reliquias de la capital antigua de Huế. El edificio principal del museo está hecho de madera, con 128 pilares de madera finamente talladas y adornadas con las imágenes de cuatro espíritus: Long, Li, Quy, Phuong y más de 1000 poemas en caracteres chinos. Este edificio era el Palacio Long An construido en 1845 bajo el reinado del rey Hien, el fundador de la dinastía Nguyen, el nombre de la época es Thieu Tri. El museo exhibe cientos de antigüedades como oro, porcelana, cerámica, esmalte y ropa real,​ e incluso contiene el tesoro nacional reconocido por el gobierno vietnamita: el trono de la dinas"@es , "후에 궁전 박물관(Huế Museum of Royal Fine Arts)은 베트남 고대 왕국의 과거와 그 시대의 예술을 보여주기 위해 만들 박물관이다. 이곳은 후에의 고대 왕국의 수도에 위치해 있다. 1927년 응우옌 왕조 왕실 칙령에 따라 참파 예술 부문도 제정되었다. 2016년에는 “응우옌 왕조의 보물(Royal Treasures of Nguyen dynasty)”이라는 전시회가 열렸으며, 이 전시회에서는 1945년 이후 하노이로 옮겨져 보관되었던 문화재를 전시했다."@ko ;
-        rdfs:label    "Huế Museum of Royal Fine Arts"@en ;
-        dbo:abstract  "The Huế Museum of Royal Fine Arts is a museum dedicated to Vietnam's imperial past and arts of that era. It is located in the former imperial capital of Huế. By royal decree of 1927, a section for the art of Champa was also instituted. In 2016, an exhibition called \"Royal Treasures of the Nguyen dynasty\" was shown, with pieces that were moved to Hanoi after 1945 for safekeeping."@en ;
-        geo:lat       "16.471300125122070312"^^xsd:float ;
-        geo:long      "107.58190155029296875"^^xsd:float .
+        rdfs:comment  "There are numerous war museums, memorials and monuments in Vietnam, this page presents a partial list of museums and monuments located in Vietnam relating to the First Indochina War and the Second Indochina War. This list is organized by location."@en ;
+        rdfs:label    "List of war museums and monuments in Vietnam"@en ;
+        dbo:abstract  "There are numerous war museums, memorials and monuments in Vietnam, this page presents a partial list of museums and monuments located in Vietnam relating to the First Indochina War and the Second Indochina War. This list is organized by location."@en ;
+        geo:lat       "10.438119888305664062"^^xsd:float ;
+        geo:long      "106.195953369140625"^^xsd:float .

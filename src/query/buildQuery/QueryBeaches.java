@@ -22,7 +22,7 @@ public class QueryBeaches extends QueryCategory {
         Beach.addTripleToConstruct("rdf:type yago:Beach109217230");
         Beach.addTripleToConstruct("rdf:type dbo:Location");
         Beach.addTripleToConstruct("rdfs:comment ?comment");
-        Beach.addTripleToConstruct("rdfs:label ?label");
+        Beach.addTripleToConstruct(label);
         Beach.addTripleToConstruct("geo:geometry ?geometry");
         Beach.addTripleToConstruct("geo:lat ?lat");
         Beach.addTripleToConstruct("geo:long ?long");
@@ -47,7 +47,7 @@ public class QueryBeaches extends QueryCategory {
         Beach.addOptionalToWhere("rdf:type yago:Beach109217230");
         Beach.addOptionalToWhere("rdf:type dbo:Location");
         Beach.addOptionalToWhere("rdfs:comment ?comment");
-        Beach.addOptionalToWhere("rdfs:label ?label");
+        Beach.addOptionalToWhere(label);
         Beach.addOptionalToWhere("geo:geometry ?geometry");
         Beach.addOptionalToWhere("geo:lat ?lat");
         Beach.addOptionalToWhere("geo:long ?long");

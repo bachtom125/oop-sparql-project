@@ -2,21 +2,11 @@ package hellofx;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import vntourism.Lakes;
-import vntourism.TouristAttractions;
-import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 
-import javafx.*;
 
 public class Main extends Application {
 

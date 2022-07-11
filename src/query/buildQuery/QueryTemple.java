@@ -24,7 +24,7 @@ public class QueryTemple extends QueryCategory {
         Temple.addTripleToConstruct("dbp:officialName ?officialName");
         Temple.addTripleToConstruct("dbp:pushpinMap ?pushpinMap");
         Temple.addTripleToConstruct("rdfs:comment ?comment");
-        Temple.addTripleToConstruct("rdfs:label ?label");
+        Temple.addTripleToConstruct(label);
         Temple.addTripleToConstruct("geo:lat ?lat");
         Temple.addTripleToConstruct("geo:long ?long");
         Temple.addTripleToConstruct("rdf:type dbo:ReligiousBuilding");
@@ -51,7 +51,7 @@ public class QueryTemple extends QueryCategory {
         Temple.addOptionalToWhere("dbp:officialName ?officialName");
         Temple.addOptionalToWhere("dbp:pushpinMap ?pushpinMap");
         Temple.addOptionalToWhere("rdfs:comment ?comment");
-        Temple.addOptionalToWhere("rdfs:label ?label");
+        Temple.addOptionalToWhere(label);
         Temple.addOptionalToWhere("geo:lat ?lat");
         Temple.addOptionalToWhere("geo:long ?long");
         Temple.addOptionalToWhere("rdf:type dbo:ReligiousBuilding");

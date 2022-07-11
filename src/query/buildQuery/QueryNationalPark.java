@@ -12,7 +12,7 @@ public class QueryNationalPark extends QueryCategory {
         QueryActions NationalPark = new QueryActions("?s");
         NationalPark.addTripleToWhere("dct:subject dbc:National_parks_of_Vietnam");
         NationalPark.addOptionalToWhere(abs);
-        NationalPark.addOptionalToWhere("rdfs:label ?label");
+        NationalPark.addOptionalToWhere(label);
         NationalPark.addOptionalToWhere(name);
         NationalPark.addOptionalToWhere("dbo:location ?location");
         NationalPark.addOptionalToWhere("dbp:areaHa ?areaHa");
