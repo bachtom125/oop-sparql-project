@@ -3,6 +3,7 @@ package query;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Resource.*;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
@@ -35,7 +36,7 @@ public class QueryActions extends QueryForm {
         return this.sb.buildString().replaceAll("\\?s ", Matcher.quoteReplacement(this.name + ' '));
     }
 
-    public void queryDataByCatergory() {
+    public void queryDataByCatergory(String subject) {
         Query query;
         try {
             query = QueryFactory.create(this.sb.buildString());
@@ -48,13 +49,20 @@ public class QueryActions extends QueryForm {
         List<Resource> iter = results.listSubjects().toList();
         for (int i = 0; i < iter.size(); i++) {
             this.changeName("dbr:" + iter.get(i).getLocalName());
-            queryDataByName();
+            queryDataByName(subject);
         }
         System.out.println("Number of files created: " + iter.size());
     }
 
-    public void queryDataByName() {
+    public void queryDataByName(String subject) {
+        subject = getValidFileName(subject);
         String queryString = getQueryString();
+        File theDir = new File("D:\\TOM\\Java programming\\OOP Project Query\\src\\results\\" + subject);
+        if (!theDir.exists()) {
+            System.out.println("Created folder: " + subject);
+            theDir.mkdirs();
+        }
+
         if (queryString == null) {
             return;
         }
@@ -68,10 +76,16 @@ public class QueryActions extends QueryForm {
             // fileName = this.name.replaceAll("dbr:", "");
             // }
             // fileName = fileName.split(Matcher.quoteReplacement("\\"))[0];
-            String fileName = this.name.replaceAll("[^\\p{IsAlphabetic}\\p{IsDigit}]", "");
-            if (fileName.contains("dbr"))
-                fileName = fileName.replaceAll("dbr", "");
-            File myObj = new File("D:\\TOM\\Java programming\\OOP Project Query\\QueryResults\\" + fileName + ".ttl");
+
+            // String fileName =
+            // this.name.replaceAll("[^\\p{IsAlphabetic}\\p{IsDigit}]","");
+            // if (fileName.contains("dbr"))
+            // fileName = fileName.replaceAll("dbr", "");
+
+            String fileName = getValidFileName(this.name);
+            File myObj = new File(
+                    "D:\\TOM\\Java programming\\OOP Project Query\\src\\results\\" + subject + "\\" + fileName
+                            + ".ttl");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
             } else {
@@ -106,5 +120,13 @@ public class QueryActions extends QueryForm {
             name = name.replaceAll("\\-", Matcher.quoteReplacement("\\-"));
 
         return name;
+    }
+
+    public String getValidFileName(String fileName) {
+        fileName = fileName.replaceAll("[^\\p{IsAlphabetic}\\p{IsDigit}]", "");
+        if (fileName.contains("db")) {
+            fileName = fileName.substring(3);
+        }
+        return fileName;
     }
 }

@@ -43,6 +43,6 @@ public class ExecuteQuery {
         String langs[] = { "en", "vi" };
         test.addLanguageFilter("?abstract", langs);
 
-        test.queryDataByCatergory();
+        test.queryDataByCatergory("dbc:Museums_in_Vietnam");
     }
 }
