@@ -1,4 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-
-<http://dbpedia.org/resource/Cần_Thơ_Museum>
-        dbo:abstract  "Can Tho Museum is a museum in Cần Thơ, Vietnam. Situated on the corner of Hoa Binh and Tran Quoc Toan streets it was established in 1976 and has more than 5000 objects and historical relics. The museum acknowledges earlier settlement by the Khmer people as well as the contributions of the Chinese Ming refugees and later arrivals. The museum displays the Delta's watercraft by models and watercraft depictions. Cần Thơ Museum is the largest museum in the Mekong Delta, with a total surface area of 2,700 square meters. The huge museum's exhibits present the history of the Cần Thơ resistance, which was waged against foreign rule. Other notable exhibits are on the region's culture and history. One of the most alluring objects on display at the museum is a life-size pagoda."@en .

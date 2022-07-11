@@ -1,5 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix dbr: <http://dbpedia.org/resource/> .
-
-dbr:Museum_of_Worldwide_Arms
-        dbo:abstract  "The Museum of Worldwide Arms, officially the Robert Taylor Museum of Worldwide Arms, is a museum of military history and equipment in Vũng Tàu, Bà Rịa-Vũng Tàu, Vietnam. Established in 2016, the privately owned museum hosts a large number of weapons, uniforms, and other historical artifacts."@en .

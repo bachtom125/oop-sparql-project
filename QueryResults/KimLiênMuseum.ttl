@@ -1,4 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-
-<http://dbpedia.org/resource/Kim_Liên_Museum>
-        dbo:abstract  "The Kim Liên Museum (Vietnamese: Khu di tích lịch sử Kim Liên) is a museum that was the childhood home of Ho Chi Minh in Làng Sen, Kim Liên village, Nam Đàn district, Nghệ An Province, Vietnam. The museum is located 2 km from the temple of Hoàng Trù. Tru is near his mother's home, where Ho Chi Minh was actually born. Ho lived here from 1890 to 1895 when his father Nguyễn Sinh Sắc served as vice-magistrate. The building consists of a palm-leaf thatch roof and bamboo wattle walls, a reconstruction of the original in 1959. A family altar built of brick is located nearby. Other buildings of the complex are built in Vietnamese temple architectural style and as such, were not present when Ho lived there. There is a gift shop, and admission to the museum is free."@en .

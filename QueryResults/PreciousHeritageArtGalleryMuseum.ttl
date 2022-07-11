@@ -1,5 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix dbr: <http://dbpedia.org/resource/> .
-
-dbr:Precious_Heritage_Art_Gallery_Museum
-        dbo:abstract  "The Precious Heritage Art Gallery and Cultural Museum is a museum located in Hoi An, Vietnam. Inaugurated on the 1st of January 2017, the museum presents the diverse cultures of Vietnam's ethnic groups through large scale portraits, traditional costumes, stories and public education. The Precious Heritage Museum is the culmination of The Precious Heritage Project, a photographic endeavor undertaken over the course of a decade by the French photographer Réhahn."@en .

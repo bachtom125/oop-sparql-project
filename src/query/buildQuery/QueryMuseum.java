@@ -1,11 +1,15 @@
-package query;
+package query.buildQuery;
+
+import java.io.IOException;
 
 import org.apache.commons.compress.harmony.pack200.Segment.PassException;
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 
+import query.QueryActions;
+
 public class QueryMuseum extends QueryCategory {
 
-    public QueryMuseum() throws ParseException {
+    public QueryMuseum() throws ParseException, IOException {
 
         QueryActions Museum = new QueryActions("?s");
 

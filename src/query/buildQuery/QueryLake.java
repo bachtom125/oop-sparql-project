@@ -1,10 +1,15 @@
-package query;
+package query.buildQuery;
+
+import java.io.IOError;
+import java.io.IOException;
 
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 
+import query.QueryActions;
+
 public class QueryLake extends QueryCategory {
 
-    public QueryLake() throws ParseException {
+    public QueryLake() throws ParseException, IOException {
 
         QueryActions Lake = new QueryActions("?s");
 

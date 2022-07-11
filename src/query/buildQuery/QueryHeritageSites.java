@@ -1,10 +1,14 @@
-package query;
+package query.buildQuery;
+
+import java.io.IOException;
 
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 
+import query.QueryActions;
+
 public class QueryHeritageSites extends QueryCategory {
 
-    public QueryHeritageSites() throws ParseException {
+    public QueryHeritageSites() throws ParseException, IOException {
 
         QueryActions Heritage = new QueryActions("?s");
 

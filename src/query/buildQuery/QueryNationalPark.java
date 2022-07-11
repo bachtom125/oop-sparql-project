@@ -1,10 +1,14 @@
-package query;
+package query.buildQuery;
+
+import java.io.IOException;
 
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
 
+import query.QueryActions;
+
 public class QueryNationalPark extends QueryCategory {
 
-    public QueryNationalPark() throws ParseException {
+    public QueryNationalPark() throws ParseException, IOException {
         QueryActions NationalPark = new QueryActions("?s");
         NationalPark.addTripleToWhere("dct:subject dbc:National_parks_of_Vietnam");
         NationalPark.addOptionalToWhere("dbo:abstract ?abstract");

@@ -35,7 +35,7 @@ public class QueryActions extends QueryForm {
         return this.sb.buildString().replaceAll("\\?s ", Matcher.quoteReplacement(this.name + ' '));
     }
 
-    public void queryDataByCatergory(String subject) {
+    public void queryDataByCatergory(String subject) throws IOException {
         Query query;
         try {
             query = QueryFactory.create(this.sb.buildString());
@@ -50,15 +50,18 @@ public class QueryActions extends QueryForm {
             this.changeName("dbr:" + iter.get(i).getLocalName());
             queryDataByName(subject);
         }
-        System.out.println("Number of files created: " + iter.size());
+        System.out.println("Number of files created: " + iter.size() + "\n");
     }
 
-    public void queryDataByName(String subject) {
+    public void queryDataByName(String subject) throws IOException {
         subject = getValidFileName(subject);
         String queryString = getQueryString();
-        File theDir = new File("D:\\TOM\\Java programming\\OOP Project Query\\src\\results\\" + subject);
+
+        String currentPath = new java.io.File(".").getCanonicalPath();
+        String filePath = currentPath + "\\results\\" + subject;
+        File theDir = new File(filePath);
         if (!theDir.exists()) {
-            System.out.println("Created folder: " + subject);
+            System.out.println("Created folder: " + subject + "\n");
             theDir.mkdirs();
         }
 
@@ -71,7 +74,7 @@ public class QueryActions extends QueryForm {
         try {
             String fileName = getValidFileName(this.name);
             File myObj = new File(
-                    "D:\\TOM\\Java programming\\OOP Project Query\\src\\results\\" + subject + "\\" + fileName
+                    filePath + "\\" + fileName
                             + ".ttl");
             if (myObj.createNewFile()) {
                 System.out.println("File created: " + myObj.getName());
@@ -80,7 +83,7 @@ public class QueryActions extends QueryForm {
             }
 
             OutputStream myWriter = new FileOutputStream(myObj);
-            System.out.println("Start the process");
+            System.out.println("Start writing to file ... ");
             Model results = qExecution.execConstruct();
             RDFDataMgr.write(myWriter, results, Lang.TURTLE);
         } catch (IOException err) {

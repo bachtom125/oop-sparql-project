@@ -1,5 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix dbr: <http://dbpedia.org/resource/> .
-
-dbr:List_of_museums_in_Vietnam
-        dbo:abstract  "This is a list of museums in Vietnam."@en .

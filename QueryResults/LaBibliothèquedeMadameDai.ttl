@@ -1,4 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-
-<http://dbpedia.org/resource/La_Bibliothèque_de_Madame_Dai>
-        dbo:abstract  "La Bibliothèque de Madame Dai was a restaurant and museum at 84A Nguyen Du Street in Ho Chi Minh City (Saigon), Vietnam. It was founded in April 1975, by Madame Nguyen Phuoc Dai, a retired lawyer and politician who converted her library into a restaurant. French President François Mitterrand ate at the restaurant in 1991. The restaurant contained a museum featuring \"pieces of Vietnamese ceramics, many temple sculptures from the pre-15th-century Cham Kingdom of Vietnam, a number of exquisite antique Chinese pieces, a large Cambodian temple rubbing, a Vietnamese screen and a large Japanese Imari ware platter\".It is believed that the restaurant closed in the mid 2000s following the death of Madame Dai."@en .

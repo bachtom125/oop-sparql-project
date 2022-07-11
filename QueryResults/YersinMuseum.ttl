@@ -1,4 +1,0 @@
-@prefix dbo: <http://dbpedia.org/ontology/> .
-@prefix dbr: <http://dbpedia.org/resource/> .
-
-dbr:Yersin_Museum  dbo:abstract  "The Yersin Museum is a museum in Nha Trang, Vietnam. It is dedicated to Alexandre Yersin, the French-Swiss bacteriologist. It is located on 8 - 10 Tran Phu Boulevard in the former home of Yersin and in the enclosure of the Pasteur Institute. The museum contains a large collection of Yersin's research equipments and letters as well as provides a description of his contributions to bacteriology, medicine, and science. The captions are in French with accompanied English and Vietnamese translations .It is open from 8am until 11am and 2pm until 4:30pm weekdays and closed on Saturdays and Sundays. Entry fee is VND 26,000 for adults."@en .
