@@ -1,35 +1,20 @@
-import org.apache.jena.arq.querybuilder.ConstructBuilder;
-import org.apache.jena.graph.Node;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.NodeIterator;
-import org.apache.jena.rdf.model.RDFNode;
-import org.apache.jena.rdf.model.ResIterator;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
 import org.apache.jena.sparql.exec.http.QueryExecutionHTTP;
 import org.apache.jena.sparql.lang.sparql_11.ParseException;
-import java.util.Set;
-import org.apache.commons.codec.Resources;
-
-import javax.print.PrintException;
-
-import java.util.HashSet;
-import java.util.List;
-
-import arq.query;
-
 import org.apache.jena.query.*;
 
+import java.util.List;
+import java.util.regex.Matcher;
+
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.OutputStream;
-import java.util.regex.Matcher;
 
 public class QueryActions extends QueryForm {
 
@@ -60,11 +45,10 @@ public class QueryActions extends QueryForm {
         Model results = qExecution.execConstruct();
         List<Resource> iter = results.listSubjects().toList();
         for (int i = 0; i < iter.size(); i++) {
-            System.out.println("TOTAL:" + iter.size());
             this.changeName("dbr:" + iter.get(i).getLocalName());
-            System.out.println("NAme:" + this.name);
             queryDataByName();
         }
+        System.out.println("Number of files created: " + iter.size());
     }
 
     public void queryDataByName() {
@@ -95,12 +79,11 @@ public class QueryActions extends QueryForm {
             OutputStream myWriter = new FileOutputStream(myObj);
             System.out.println("Start the process");
             Model results = qExecution.execConstruct();
-            List<Resource> iter = results.listSubjects().toList();
             RDFDataMgr.write(myWriter, results, Lang.TURTLE);
         } catch (IOException err) {
             err.printStackTrace();
         } finally {
-            System.out.println("Finished!");
+            System.out.println("Finished!\n");
             qExecution.close();
         }
     }
